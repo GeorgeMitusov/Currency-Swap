@@ -1,0 +1,31 @@
+<div class="app">
+
+  <div class="main-container" [@enter]>
+    
+    <app-header [headTitle]="title" [format]="format"></app-header>
+    
+    <app-currency-input
+      title="From"
+      [rates]="rates"
+      [currency]="fromCur" 
+      [amount]="fromAmount" 
+      [amountChange]='changeAmountFrom'
+      [currencyChange]='changeCurFrom'
+      [converting]='convertValue'
+    >
+    </app-currency-input>
+    
+    <app-currency-input
+      title="To"
+      [rates]="rates"
+      [currency]="toCur"
+      [amount]="toAmount"
+      [amountChange]='changeAmountTo'
+      [currencyChange]='changeCurTo'
+      [converting]='convertSecondValue'
+    >
+    </app-currency-input>
+
+  </div>
+
+</div>  
